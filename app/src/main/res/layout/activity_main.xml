@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".MainActivity">
+
+
+        <!-- Top image or banner -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/car"
+            app:layout_constraintEnd_toEndOf="@id/guideline3"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Hyundai Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewHyundai"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewBMW"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <ImageView
+                android:id="@+id/imageHyundai"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Hyundai"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hyundai" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- BMW Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewBMW"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewFiat"
+            app:layout_constraintStart_toEndOf="@+id/cardViewHyundai"
+            app:layout_constraintTop_toTopOf="@+id/cardViewHyundai">
+
+            <ImageView
+                android:id="@+id/imageBMW"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="BMW"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bmw" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Fiat Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewFiat"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline3"
+            app:layout_constraintStart_toEndOf="@+id/cardViewBMW"
+            app:layout_constraintTop_toTopOf="@+id/cardViewBMW">
+
+            <ImageView
+                android:id="@+id/imageFiat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Fiat"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fiatjpeg" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Kia Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewKIA"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewChevrolet"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewHyundai">
+
+            <ImageView
+                android:id="@+id/imageKIA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="KIA"
+                android:scaleType="fitCenter"
+                android:src="@drawable/kialogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Chevrolet Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewChevrolet"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewHonda"
+            app:layout_constraintStart_toEndOf="@+id/cardViewKIA"
+            app:layout_constraintTop_toTopOf="@+id/cardViewKIA">
+
+            <ImageView
+                android:id="@+id/imageChevrolet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Chevrolet"
+                android:scaleType="fitCenter"
+                android:src="@drawable/chevroletlogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Honda Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewHonda"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline3"
+            app:layout_constraintStart_toEndOf="@+id/cardViewChevrolet"
+            app:layout_constraintTop_toTopOf="@+id/cardViewChevrolet">
+
+            <ImageView
+                android:id="@+id/imageHonda"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Honda"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hondalogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Toyota Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewToyota"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewDodge"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewKIA">
+
+            <ImageView
+                android:id="@+id/imageToyota"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Toyota"
+                android:scaleType="fitCenter"
+                android:src="@drawable/toyotalogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Dodge Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDodge"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewFord"
+            app:layout_constraintStart_toEndOf="@+id/cardViewToyota"
+            app:layout_constraintTop_toTopOf="@+id/cardViewToyota">
+
+            <ImageView
+                android:id="@+id/imageDodge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Dodge"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dodgelogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ford Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewFord"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline3"
+            app:layout_constraintStart_toEndOf="@+id/cardViewDodge"
+            app:layout_constraintTop_toTopOf="@+id/cardViewDodge">
+
+            <ImageView
+                android:id="@+id/imageFord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Ford"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fordlogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Toyota Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewNissan"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewLancer"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewToyota">
+
+            <ImageView
+                android:id="@+id/imageNissan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Toyota"
+                android:scaleType="fitCenter"
+                android:src="@drawable/nissanlogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Dodge Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewLancer"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewCitroen"
+            app:layout_constraintStart_toEndOf="@+id/cardViewNissan"
+            app:layout_constraintTop_toTopOf="@+id/cardViewNissan">
+
+            <ImageView
+                android:id="@+id/imageLancer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Dodge"
+                android:scaleType="fitCenter"
+                android:src="@drawable/lancerlogoo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ford Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewCitroen"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline3"
+            app:layout_constraintStart_toEndOf="@+id/cardViewLancer"
+            app:layout_constraintTop_toTopOf="@+id/cardViewLancer">
+
+            <ImageView
+                android:id="@+id/imageCitroen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Ford"
+                android:scaleType="fitCenter"
+                android:src="@drawable/citroeanlogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Suzuki Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSuzuki"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewSkoda"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewNissan">
+
+            <ImageView
+                android:id="@+id/imageSuzuki"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Toyota"
+                android:scaleType="fitCenter"
+                android:src="@drawable/suzukilogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Skoda Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSkoda"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewSubaru"
+            app:layout_constraintStart_toEndOf="@+id/cardViewSuzuki"
+            app:layout_constraintTop_toTopOf="@+id/cardViewSuzuki">
+
+            <ImageView
+                android:id="@+id/imageSkoda"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Dodge"
+                android:scaleType="fitCenter"
+                android:src="@drawable/skodalogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Subaru Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSubaru"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline3"
+            app:layout_constraintStart_toEndOf="@+id/cardViewSkoda"
+            app:layout_constraintTop_toTopOf="@+id/cardViewSkoda">
+
+            <ImageView
+                android:id="@+id/imageSubaru"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Ford"
+                android:scaleType="fitCenter"
+                android:src="@drawable/subarulogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Renault Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewRenault"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewSkoda"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewSuzuki">
+
+            <ImageView
+                android:id="@+id/imageRenault"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Renault"
+                android:scaleType="fitCenter"
+                android:src="@drawable/renaultlogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Volvo Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewVolvo"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewSubaru"
+            app:layout_constraintStart_toEndOf="@+id/cardViewRenault"
+            app:layout_constraintTop_toTopOf="@+id/cardViewRenault">
+
+            <ImageView
+                android:id="@+id/imageVolvo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Volvo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/volvologo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Opel Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewOpel"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline3"
+            app:layout_constraintStart_toEndOf="@+id/cardViewVolvo"
+            app:layout_constraintTop_toTopOf="@+id/cardViewVolvo">
+
+            <ImageView
+                android:id="@+id/imageOpel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Ford"
+                android:scaleType="fitCenter"
+                android:src="@drawable/opellogo" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp"
+            app:layout_constraintGuide_percent="0.35" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
